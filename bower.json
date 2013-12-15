@@ -7,6 +7,8 @@
     "components"
   ],
   "dependencies": {
-    "angularjs": "1.2.*"
+    "angular": "*",
+    "angular-route": "*",
+    "skeleton": "*"
   }
 }
