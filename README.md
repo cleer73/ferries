@@ -1,4 +1,4 @@
-ferries
+Ferries
 =======
 
-A quick way to check for a ferries next arrival.
+A quick way to check for a ferries next departure.
