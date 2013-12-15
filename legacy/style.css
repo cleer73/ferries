@@ -1,0 +1,128 @@
+body {
+  font-family: sans-serif;
+  margin: 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(./img/sunset.JPG);
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.ferry-schedule {
+  max-width: 384px;
+  margin: 0px auto 64px;
+}
+
+.ferry-schedule .heading {
+  background-color: #FFF;
+  opacity: .9;
+  padding: 0 12px;
+  height: 64px;
+}
+
+.ferry-schedule .heading h1,
+.ferry-schedule .heading h2 {
+  float: left;
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  line-height: 64px;
+  text-transform: uppercase;
+}
+
+.ferry-schedule .heading h2 {
+  float: right;
+  text-align: right;
+}
+
+.ferry-schedule .route-alert {
+  border-top: 1px solid #060606;
+  clear: both;
+  padding: 16px;
+  background-color: #fff;
+  color: rgb(255, 32,   0);
+  font-size: 16px;
+  line-height: 20px;
+  opacity: .9;
+}
+
+/* .ferry-schedule .status { */
+.ferry-schedule .departure {
+  border-bottom: 1px solid #060606;
+  clear: both;
+  line-height: 32px;
+  font-size: 18px;
+  color: #FFF;
+  background-color: #000;
+  opacity: .65;
+}
+
+.ferry-schedule .route-from,
+.ferry-schedule .route-to {
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+  
+}
+
+.ferry-schedule .route-from {
+  float: left;
+}
+
+.ferry-schedule .route-to {
+  float: right;
+}
+
+.ferry-schedule .routes,
+.ferry-schedule .routes li {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;  
+}
+
+.ferry-schedule .routes li {
+  float: left;
+  width: 50%;
+  opacity: .65;
+  height: 64px;
+}
+
+.ferry-schedule .routes a {
+  display: block;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  padding: 10px 0px;
+  color: white;
+  text-decoration: none;
+  background-color: #000;
+}
+
+.ferry-schedule .routes a:hover {
+  background-color: #FFF;
+  color: black;
+}
+
+.ferry-schedule .timer {
+  text-align: center;
+  padding: 0px 30%;
+}
+
+.ferry-schedule .timer table {
+  margin: 0px auto;
+  color: inherit;
+  line-height: inherit;
+  font-size: inherit;
+}
+
+.ferry-schedule .departure.west .route-from {
+  display: none;
+}
+
+.ferry-schedule .departure.east .route-to {
+  display: none;
+}
+
+.ferry-schedule .departure.alert   { background-color: rgb(255, 32,   0); }
+.ferry-schedule .departure.caution { background-color: rgb(128, 64,   0); }
+.ferry-schedule .departure.good    { background-color: rgb(  0, 64,   0); }
