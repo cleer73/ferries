@@ -2,7 +2,7 @@ from fabric.api import *
 import json
 
 env.type = 'dev'
-env.hosts = ['127.0.0.1:2200']
+env.hosts = ['127.0.0.1:2222']
 env.user = 'vagrant'
 env.password = 'vagrant'
 
