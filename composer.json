@@ -1,0 +1,15 @@
+{
+    "name": "cleer73/ferries",
+    "description": "A quick way to check for a ferries next departure.",
+    "license": "BSD 2-Clause License",
+    "authors": [
+        {
+            "name": "Jacob Lee",
+            "email": "jake@cleer.net"
+        }
+    ],
+    "minimum-stability": "alpha",
+    "require": {
+
+    }
+}
