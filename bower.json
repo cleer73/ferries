@@ -1,0 +1,12 @@
+{
+  "name": "cleer73/ferries",
+  "version": "0.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "angularjs": "1.2.*"
+  }
+}
