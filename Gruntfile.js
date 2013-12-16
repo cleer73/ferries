@@ -10,7 +10,7 @@ module.exports = function(grunt) {
           'App/UI/Bootstrap.js',
           'App/UI/Controllers/*.js'
         ],
-        dest: 'public/app.js'
+        dest: 'public/scripts/app.js'
       },
       styles: {
         src: [
@@ -18,7 +18,8 @@ module.exports = function(grunt) {
           'bower_components/font-awesome/css/font-awesome.css',
           'App/UI/**/*.css'
         ],
-        dest: 'public/app.css'
+        dest: 'public/styles/app.css'
+      }
     },
     copy: {
       fonts: {
