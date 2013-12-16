@@ -9,6 +9,7 @@
   "dependencies": {
     "angular": "*",
     "angular-route": "*",
-    "skeleton": "*"
+    "skeleton": "*",
+    "font-awesome": "*"
   }
 }
