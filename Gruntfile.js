@@ -35,8 +35,16 @@ module.exports = function(grunt) {
     },
     watch: {
       scripts: {
-        files: 'App/UI/**/*.js',
+        files: [
+          'App/UI/**/*.js'
+        ],
         tasks: ['concat:scripts']
+      },
+      styles: {
+        files: [
+          'App/UI/**/*.css'
+        ],
+        tasks: ['concat:styles']
       }
     }
   });
@@ -47,7 +55,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Define tasks
-  grunt.registerTask('default', ['concat']);
-  grunt.registerTask('watch', ['watch']);
-  grunt.registerTask('watch-scripts', ['watch:scripts']);
+  grunt.registerTask('default', ['concat', 'copy']);
+  grunt.registerTask('monitor', ['concat', 'copy', 'watch']);
 };
