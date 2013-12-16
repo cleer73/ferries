@@ -1,0 +1,26 @@
+{
+  "name": "ferries",
+  "version": "0.0.0",
+  "description": "A quick way to check for a ferries next departure.",
+  "main": "public/index.html",
+  "dependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-watch": "~0.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cleer73/ferries.git"
+  },
+  "author": "Jacob Lee <jake@cleer.net>",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "35927b1f17e11e43f3a7bfabb0001d3a4dc5099c",
+  "bugs": {
+    "url": "https://github.com/cleer73/ferries/issues"
+  }
+}
