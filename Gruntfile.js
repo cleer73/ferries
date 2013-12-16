@@ -18,6 +18,7 @@ module.exports = function(grunt) {
           'bower_components/skeleton/stylesheets/skeleton.css',
           'bower_components/skeleton/stylesheets/layout.css',
           'bower_components/font-awesome/css/layout.css',
+          'bower_components/font-awesome/css/font-awesome.css',
           'App/UI/**/*.css'
         ],
         dest: 'public/app.css'
