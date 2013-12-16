@@ -21,6 +21,16 @@ module.exports = function(grunt) {
           'App/UI/**/*.css'
         ],
         dest: 'public/app.css'
+    },
+    copy: {
+      fonts: {
+        expand: true,
+        flatten: true,
+        src: [
+          'bower_components/font-awesome/fonts/*'
+        ],
+        dest: 'public/fonts/',
+        filter: 'isFile'
       }
     },
     watch: {
@@ -34,6 +44,7 @@ module.exports = function(grunt) {
   // Load Plugins
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Define tasks
   grunt.registerTask('default', ['concat']);
