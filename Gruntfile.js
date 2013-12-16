@@ -15,9 +15,6 @@ module.exports = function(grunt) {
       styles: {
         src: [
           'bower_components/skeleton/stylesheets/base.css',
-          'bower_components/skeleton/stylesheets/skeleton.css',
-          'bower_components/skeleton/stylesheets/layout.css',
-          'bower_components/font-awesome/css/layout.css',
           'bower_components/font-awesome/css/font-awesome.css',
           'App/UI/**/*.css'
         ],
