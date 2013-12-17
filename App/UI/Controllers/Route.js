@@ -1,8 +1,8 @@
 ferryScheduleApp.controller('RouteCtrl', function ($scope) {
 
   $scope.info = {
-    fromPort: "Bainbridge",
-    toPort: "Seattle"
+    westPort: "Bainbridge",
+    eastPort: "Seattle"
   };
 
   $scope.alerts = [
