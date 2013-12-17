@@ -1,0 +1,79 @@
+.ferry-route {
+  max-width: 768px;
+  margin: 0px auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  background-color: #FFF;
+  opacity: .9;
+  padding: 0px 8px;
+  margin: 0px;
+  font-size: 28px;
+  line-height: 48px;
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.east {
+  float: right;
+}
+
+.route-extras,
+.route-departures {
+  float: left;
+  width: 368px;
+  margin: 8px;
+}
+
+.route-extras > div {
+  margin-bottom: 8px;
+}
+
+.ferry-route ul {
+  clear: both;
+  margin: 0px;
+}
+
+.ferry-route li {
+  margin: 0px;
+  border-bottom: 1px solid #060606;
+  clear: both;
+  line-height: 23px;
+  font-size: 18px;
+  color: #FFF;
+  background-color: #000;
+  opacity: .65;
+  padding: 8px;
+}
+
+.ferry-nav li > a {
+  display: block;
+  text-decoration: none;
+}
+
+.route-departures strong {
+  color: #999;
+}
+
+.route-west {
+  float: left;
+}
+
+.route-east {
+  float: right;
+}
+
+.departure-time {
+  text-align: center;
+  padding: 0px 30%;
+}
+
+.departure-time table {
+  margin: 0px auto;
+  color: inherit;
+  line-height: inherit;
+  font-size: inherit;
+}
+
+.departure.alert   { background-color: rgb(255, 32,   0); }
+.departure.caution { background-color: rgb(128, 64,   0); }
+.departure.good    { background-color: rgb(  0, 64,   0); }

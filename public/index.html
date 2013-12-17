@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
 
-  <title>{{fromPort}}-{{toPort}} Ferry &mdash; cleer.net</title>
+  <title>{{westPort}}-{{eastPort}} Ferry &mdash; cleer.net</title>
 
-  <meta name="description" content="The upcoming route runs for the {{fromPort}}-{{to_port}} Washington State Ferry.">
+  <meta name="description" content="The upcoming route runs for the {{westPort}}-{{eastPort}} Washington State Ferry.">
   <meta name="author" content="Jacob Lee <jake@cleer.net>">
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -15,68 +15,70 @@
 </head>
 <body>
 
-  <div class="container" ng-controller="RouteCtrl">
-    <div class="row">
+  <div class="ferry-route" ng-controller="RouteCtrl">
+    <div class="route-extras">
+      <div class="ferry-nav" ng-controller="NavCtrl">
+        <h2>Routes</h2>
 
-      <div class="offset-by-four twelve columns">
-        <h1>
-          <span class="from">{{info.fromPort}}</span>
-          <span class="to">{{info.toPort}}</span>
-        </h1>
+        <ul>
+          <li ng-repeat="r in routes">
+            <a href="/{{r.id}}">
+              <span class="west">
+                <i class="fa fa-flag fa-inverse"></i>
+                {{r.westPort}}
+              </span>
+              <span class="east">
+                {{r.eastPort}}
+                <i class="fa fa-flag fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+        </ul>
       </div>
 
-    </div>
-
-    <div class="row">
-      <div class="four columns">
-
-        <div ng-controller="NavCtrl">
-          <h2>Routes</h2>
-
-          <ul class="square">
-            <li ng-repeat="r in routes"><a href="/{{r.id}}">{{r.title}}</a></li>
-          </ul>
-        </div>
-
+      <div class="ferry-alerts">
         <h2>Alerts</h2>
 
-        <ul class="route-alerts">
+        <ul>
           <li ng-repeat="a in alerts">
             <strong>ALERT:</strong>
             {{a.message}}
           </li>
         </ul>
-
       </div>
+    </div>
 
-      <div class="twelve columns">
+    <div class="route-departures">
+      <h1>
+        <span class="west">{{info.westPort}}</span>
+        <span class="east">{{info.eastPort}}</span>
+      </h1>
 
-        <ul class="route-departures">
-          <li class="departure {{d.status}}" ng-repeat="d in departures">
+      <ul>
+        <li class="departure {{d.status}}" ng-repeat="d in departures">
 
-            <div class="route-from" ng-if="d.west">{{d.departureTime}}</div>
-            <div class="route-to" ng-if="d.east">{{d.departureTime}}</div>
-            <div class="departure-time">
-              <span ng-if="d.totalMinutesUntil <= 2">NOW!</span>
+          <div class="route-west" ng-if="d.west">{{d.departureTime}}</div>
+          <div class="route-east" ng-if="d.east">{{d.departureTime}}</div>
+          <div class="departure-time">
+            <span ng-if="d.totalMinutesUntil <= 2">NOW!</span>
 
-              <span ng-if="d.totalMinutesUntil > 2 && d.totalMinutesUntil <= 60">
-                {{d.totalMinutesUntil}} <strong>mins</strong>
-              </span>
+            <span ng-if="d.totalMinutesUntil > 2 && d.totalMinutesUntil <= 60">
+              {{d.totalMinutesUntil}} <strong>mins</strong>
+            </span>
 
-              <span ng-if="d.totalMinutesUntil > 60">
-                <table cellpadding="0"><tr>
-                  <td>{{d.hoursUntil}}</td>
-                  <td><strong>h</strong>&nbsp;</td>
-                  <td>{{d.minutesUntil}}</td>
-                  <td><strong>m</strong></td>
-                </tr></table>
-              </span>            
-            </div>
+            <span ng-if="d.totalMinutesUntil > 60">
+              <table cellpadding="0"><tr>
+                <td>{{d.hoursUntil}}</td>
+                <td><strong>h</strong>&nbsp;</td>
+                <td>{{d.minutesUntil}}</td>
+                <td><strong>m</strong></td>
+              </tr></table>
+            </span>            
+          </div>
 
-          </li>
-        </ul>
+        </li>
+      </ul>
 
-      </div>
     </div>
   </div>
 

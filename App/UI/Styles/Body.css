@@ -1,0 +1,9 @@
+body {
+  font-family: sans-serif;
+  margin: 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(http://cleer.net/ferries/img/sunset.JPG);
+  background-repeat: no-repeat;
+  background-position: center top;
+}
