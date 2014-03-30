@@ -1,0 +1,35 @@
+body {
+  font-size: 20px;
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+section {
+  background-color: #FFFFFF;
+}
+
+.header {
+  background-color: #00735a;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
+.primary .header {
+  background-color: #194977;
+}
+
+.departures > tr > td {
+  background-color: #FFFFFF;
+}
+
+.departures > tr.even > td {
+  background-color: #f2f2df;
+}
+
+strong,
+table.time-until th {
+  font-weight: bold;
+}
+
+.badge {
+  color: #00735a;
+}

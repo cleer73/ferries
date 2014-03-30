@@ -1,0 +1,216 @@
+/******************************************************************************
+ * Basic layout
+ */
+body {
+  text-align: center;
+  background-color: #a3b8ce;
+}
+
+main {
+  min-width: 356px;
+  max-width: 960px;
+  margin: 0px auto;
+  text-align: left;
+}
+
+section {
+  margin: 8px;
+  clear: both;
+}
+
+.primary,
+.secondary {
+  float: left;
+  width: 50%;
+}
+
+.table {
+  width: 100%;
+}
+
+
+/******************************************************************************
+ * Rows of the departures table.
+ */
+.departures > tr > td {
+  width: 35%;
+  text-align: center;
+  padding: 8px 4px;
+}
+
+.departures > tr > td.departs-at {
+  width: 30%;
+}
+
+/******************************************************************************
+ * Time Until Departure
+ */
+table.time-until {
+  display: inline-table;
+}
+
+table.time-until td {
+  width: 1em;
+  text-align: right;
+}
+
+table.time-until th {
+  width: 1em;
+  text-align: left;
+}
+
+/******************************************************************************
+ * Section Header
+ */
+.header {
+  height: 48px;
+}
+
+.header span {
+  line-height: 2em;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.primary .header > * {
+  text-align: center;
+  display: block;
+  float: left;
+  width: 30%;
+  padding: 0;
+}
+
+.primary .header i {
+  height: 48px;
+  line-height: 2em;
+}
+
+.primary .header > span {
+  width: 35%;
+}
+
+.secondary .header i {
+  width: 48px;
+  height: 48px;
+  line-height: 2em;
+  text-align: center;
+  margin: 0;
+  border-right: 1px solid white;
+}
+
+/******************************************************************************
+ * Navigation
+ */
+.navigation {
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+  padding-left: 48px;
+
+  background-color: #00735a;
+}
+
+.navigation li {
+  width: 25%;
+  float: left;
+
+  background-color: #f2f2df;
+}
+
+.navigation a {
+  padding: 8px 0px;
+  display: block;
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  line-height: 28px;
+}
+
+.navigation a:hover {
+  background-color: #194977;
+  color: #FFFFFF;
+}
+
+/******************************************************************************
+ * Messages
+ */
+.messages {
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+
+  background-color: #00735a;
+}
+.messages li {
+  margin-left:48px;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  padding: 8px 8px 8px 32px;
+
+  font-size: 20px;
+  line-height: 24px;
+
+  background-color: #f2f2df;
+}
+
+.messages li:hover {
+  background-color: #194977;
+  color: #FFFFFF;
+}
+
+.messages li .fa {
+  width: 24px;
+  float: left;
+  margin-left: -26px;
+
+  /*color: white;*/
+  line-height: 24px;
+  text-align: center;
+}
+
+
+/******************************************************************************
+ * Utility Classes
+ */
+.center {
+  text-align: center;
+}
+
+.badge {
+  background: white;
+  border-radius: 1024px;
+  padding: 0px 8px;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/******************************************************************************
+ * Media Reflows
+ */
+
+@media only screen and (max-width: 960px) {
+
+  .navigation li {
+    width: 50%;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+  .primary, .secondary {
+    clear: both;
+    float: none;
+    width: auto;
+  }
+
+  .secondary section ul {
+    -display: none;
+  }
+}
+
