@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="ferryScheduleApp">
+<head>
+  <meta charset="utf-8">
+
+  <title>{{westPort}}-{{eastPort}} Ferry &mdash; cleer.net</title>
+
+  <meta name="description" content="The upcoming route runs for the {{westPort}}-{{eastPort}} Washington State Ferry.">
+  <meta name="author" content="Jacob Lee <jake@cleer.net>">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <link rel="stylesheet" href="styles/app.css"/>
+</head>
+<body>
+
+  <main>
+    <div class="secondary">
+      <div ng-include="'templates/navigation.html'"></div>
+      <div ng-include="'templates/messages.html'"></div>
+    </div>
+    <div class="primary">
+      <div ng-include="'templates/schedule.html'"></div>
+    </div>
+  </div>
+
+  <script src="scripts/app.js"></script>
+
+</body>
+</html>

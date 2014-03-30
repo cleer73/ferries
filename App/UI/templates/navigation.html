@@ -1,0 +1,14 @@
+<section ng-controller="NavigationCtrl">
+  
+  <h2 class="header">
+    <i class="fa fa-map-marker icon"></i>
+    <span class="badge">{{routes.length}}</span>
+    <span>Routes</span>
+  </h2>
+
+  <ul class="navigation group">
+    <li ng-repeat="r in routes">
+      <a href="/{{r.id}}">{{r.westPort}}<br/>{{r.eastPort}}</a>
+    </li>
+  </ul>
+</section>

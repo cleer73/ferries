@@ -1,0 +1,30 @@
+<section ng-controller="ScheduleCtrl">
+  <h1 class="header" ng-click="fetch()">
+    <span>{{info.westPort}}</span>
+    <i class="fa fa-clock-o"></i>
+    <span>{{info.eastPort}}</span>
+  </h1>
+
+  <table class="table">
+    <tbody class="departures">
+      <tr class="{{d.status}}" ng-repeat="d in departures" ng-class-even="'even'">
+        <td><span ng-if="d.west">{{d.departureTime}}</span></td>
+        <td class="departs-at">
+          <strong ng-if="d.totalMinutesUntil <= 2">NOW!</strong>
+
+          <span ng-if="d.totalMinutesUntil > 2 && d.totalMinutesUntil <= 60">
+            {{d.totalMinutesUntil}} <strong>mins</strong>
+          </span>
+
+          <span ng-if="d.totalMinutesUntil > 60">
+            <table class="time-until"><tr>
+              <td>{{d.hoursUntil}}</td><th>h</th>
+              <td>{{d.minutesUntil}}</td><th>m</th>
+            </tr></table>
+          </span>
+        </td>
+        <td><span ng-if="d.east">{{d.departureTime}}</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>

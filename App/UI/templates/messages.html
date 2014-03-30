@@ -1,0 +1,14 @@
+<section ng-controller="MessagesCtrl">
+  <h2 class="header">
+    <i class="fa fa-inbox icon" ng-click="fetch()"></i>
+    <span class="badge">{{feed.length}}</span>
+    <span>Message<span ng-if="feed.length != 1">s</span></span>
+  </h2>
+
+  <ul class="messages" ng-model="feed">
+    <li ng-repeat="post in feed">
+      <i class="fa fa-quote-left"></i>
+      {{post.content}}
+    </li>
+  </ul>
+</section>
