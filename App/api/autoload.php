@@ -7,4 +7,4 @@ set_include_path(implode(PATH_SEPARATOR, array(
 )));
 
 // Use the Composer Autoloader.
-require_once 'vendor/autoload.php';
+$loader = require_once 'vendor/autoload.php';
