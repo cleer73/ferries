@@ -1,6 +1,7 @@
 var ferryScheduleApp = angular.module('ferryScheduleApp', []);
 
 var config = {
+  accessCode: 'WSDOT-API-ACCESS-CODE',
   currentRoute: {
     departs: 'baindridge',
     arrives: 'seattle'
