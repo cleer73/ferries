@@ -1,6 +1,6 @@
 <?php
 
-$appRoot = realpath(dirname(__FILE__).'/../App');
+$appRoot = realpath(dirname(__FILE__).'/../app/api');
 
 include "{$appRoot}/Autoload.php";
 
