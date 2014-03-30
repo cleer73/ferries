@@ -1,4 +1,4 @@
-ferryScheduleApp.controller('NavCtrl', function ($scope) {
+ferryScheduleApp.controller('NavigationCtrl', function ($scope) {
 
   $scope.routes = [
     {id: 'clinton-mukilteo',   westPort: 'Clinton',    eastPort: 'Mukilteo'},

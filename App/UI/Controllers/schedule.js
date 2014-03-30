@@ -1,15 +1,58 @@
-ferryScheduleApp.controller('RouteCtrl', function ($scope) {
+ferryScheduleApp.controller('ScheduleCtrl', function ($scope) {
+
+  $scope.url = 'http://www.wsdot.wa.gov/ferries/schedule/RSSFeeds/RemainingSailingsToday.aspx';
+  $scope.updated = 0;
+  $scope.feed = [];
+
+  $scope.fetch = function () {
+    var expires = 1000 * 60 * 5;
+    var cachedFor = Date.now() - $scope.updated;
+
+    if(cachedFor >= expires) {
+      var route = config.currentRoute;
+
+      query = [
+        $scope.url,
+        '?departingterm=' + config.terminals[route.departs],
+        '&arrivingterm=' + config.terminals[route.arrives],
+        '&onlyremainingtimes=true'
+      ].join('');
+
+      console.log(query);
+
+      Feed({url: query, callback: $scope.importFeed});
+    }
+  };
+
+  $scope.importFeed = function (posts) {
+    var newFeed = [];
+
+    console.log(posts);
+    return;
+
+    $.each(posts.feed.entries, function (index, post) {
+      split = Number(post.title.search(/\]/));
+
+      newFeed.push({
+        link: post.link,
+        content: post.title.substring(split + 1),
+        date: post.title.substring(0, split)
+      });
+    });
+
+    $scope.updated = Date.now();
+    $scope.feed = newFeed;
+
+    Storage.set('route_feed', newFeed);
+    console.log(newFeed);
+
+    $scope.$apply();
+  }
 
   $scope.info = {
     westPort: "Bainbridge",
     eastPort: "Seattle"
   };
-
-  $scope.alerts = [
-    {
-      message: '12/17 Comm Meeting 6-8pm at the Bainbridge Island Art Museum 100 Ravine Ln. Bainbridge Island.'
-    }
-  ];
 
   $scope.departures = [
     {
